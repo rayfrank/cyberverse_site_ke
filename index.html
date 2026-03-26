@@ -1017,6 +1017,25 @@
                 border-radius: 28px;
                 align-items: flex-start;
                 flex-direction: column;
+                gap: 18px;
+            }
+
+            .brand {
+                width: 100%;
+                gap: 12px;
+            }
+
+            .brand img {
+                width: clamp(96px, 28vw, 116px);
+            }
+
+            .brandMeta strong {
+                font-size: 11px;
+                letter-spacing: .14em;
+            }
+
+            .brandMeta span {
+                font-size: 11px;
             }
 
             nav {
@@ -1041,17 +1060,129 @@
             }
 
             .heroLogo {
-                width: 100%;
-                padding: 24px 0 64px;
+                width: min(100%, 440px);
+                padding: 18px 0 82px;
+            }
+
+            .heroLogo::before {
+                width: min(92vw, 360px);
+                height: min(92vw, 360px);
+                top: 43%;
+                filter: blur(32px);
+            }
+
+            .heroLogo::after {
+                width: min(96vw, 420px);
+                height: min(54vw, 180px);
+                top: 44%;
+            }
+
+            .logoRing,
+            .logoRingB {
+                top: 44%;
+            }
+
+            .logoRing {
+                width: min(86vw, 380px);
+                height: min(34vw, 130px);
+            }
+
+            .logoRingB {
+                width: min(70vw, 300px);
+                height: min(26vw, 110px);
+            }
+
+            .logoCorner {
+                width: 28px;
+                height: 28px;
+            }
+
+            .logoCorner.tl,
+            .logoCorner.tr {
+                top: 31%;
+            }
+
+            .logoCorner.bl,
+            .logoCorner.br {
+                bottom: 20%;
             }
 
             .heroLogoInner {
-                padding: 0 0 48px;
+                padding: 0 0 82px;
             }
 
             .logoMain,
             .logoGhost {
-                width: min(420px, 100%);
+                width: min(320px, 82vw);
+            }
+
+            .logoSweep {
+                width: min(88vw, 360px);
+                height: 62px;
+            }
+
+            .logoPulse {
+                width: min(82vw, 330px);
+                height: min(30vw, 120px);
+            }
+
+            .logoReadout {
+                top: calc(50% + 72px);
+                width: min(80vw, 260px);
+                font-size: 10px;
+                line-height: 1.35;
+                letter-spacing: .14em;
+                text-align: center;
+                white-space: normal;
+            }
+
+            .logoStatusBar {
+                bottom: 42px;
+                width: min(240px, 72vw);
+            }
+
+            .logoMeta {
+                bottom: -6px;
+                max-width: min(84vw, 270px);
+                padding: 8px 12px;
+                font-size: 10px;
+                letter-spacing: .08em;
+                line-height: 1.3;
+                justify-content: center;
+                text-align: center;
+                white-space: normal;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .heroLogo {
+                padding: 8px 0 78px;
+            }
+
+            .heroLogoInner {
+                padding: 0 0 74px;
+            }
+
+            .logoMain,
+            .logoGhost {
+                width: min(290px, 80vw);
+            }
+
+            .logoCorner {
+                opacity: .72;
+            }
+
+            .logoReadout {
+                display: none;
+            }
+
+            .logoStatusBar {
+                bottom: 38px;
+                width: min(220px, 68vw);
+            }
+
+            .logoMeta {
+                max-width: min(78vw, 230px);
             }
         }
 
